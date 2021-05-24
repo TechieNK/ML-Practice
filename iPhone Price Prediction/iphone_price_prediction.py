@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 data = pd.read_csv('iphone_price.csv')
-plt.scatter(data['version'],data['price'])
+plt.scatter(data['version'],data['price'])  #data.plot(x='version',y='price')
 plt.xlabel('iPhone Model')
 plt.ylabel('Price in $')
 plt.plot()
