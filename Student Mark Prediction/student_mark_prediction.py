@@ -85,3 +85,12 @@ plt.scatter(X_train,Y_train)
 
 plt.scatter(X_test, Y_test)
 plt.plot(X_train, model.predict(X_train), color = "r")
+
+"""# Save the model"""
+
+import joblib
+
+joblib.dump(model,"student_mark_predictor.pkl")
+
+lr = joblib.load("student_mark_predictor.pkl")
+lr.predict([[5]])[0]
